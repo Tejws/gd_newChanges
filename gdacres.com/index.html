@@ -885,8 +885,7 @@
 </style>
 
                             
-                            <!-- Flexbox container for the list and video -->
-                           <!-- Project Amenities and Video Section -->
+   <!-- Project Amenities and Video Section -->
 <div class="features-container">
     <!-- Amenities with icons on the left -->
     <div class="amenities-container">
@@ -952,113 +951,115 @@
     gap: 30px;
     max-width: 1400px;
     margin: 40px auto;
-    padding: 0 20px;
-}
+    /* Removed padding: 0 20px; rely on max-width and margin for centering */
+    width: 100%; /* Ensure it fits within parent container */
+    box-sizing: border-box; /* Ensure padding/margins are included in width */
+  }
 
-/* Styling for the amenities container */
-.amenities-container {
+  /* Styling for the amenities container */
+  .amenities-container {
     flex: 1;
     max-width: 40%;
-}
+  }
 
-.amenities-title {
+  .amenities-title {
     font-size: 1.8rem;
     margin-bottom: 25px;
     font-weight: bold;
-}
+  }
 
-/* Styling for the amenities list */
-.amenities-list {
+  /* Styling for the amenities list */
+  .amenities-list {
     list-style: none;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px; /* Increased gap between items */
     row-gap: 25px; /* More space between rows */
-}
+  }
 
-.amenities-list li {
+  .amenities-list li {
     display: flex;
     align-items: center;
     gap: 12px; /* Increased gap between icon and text */
     font-size: 1.1rem;
     transition: transform 0.2s ease;
     padding: 8px 5px; /* Added padding around each item */
-}
+  }
 
-.amenities-list li:hover {
+  .amenities-list li:hover {
     transform: translateX(5px);
-}
+  }
 
-.amenity-icon {
+  .amenity-icon {
     width: 35px;
     height: 35px;
     object-fit: contain;
     flex-shrink: 0; /* Prevents icon from shrinking */
-}
+  }
 
-/* Styling for the video container */
-.video-container {
+  /* Styling for the video container */
+  .video-container {
     flex: 1;
     max-width: 60%;
-}
+  }
 
-.video-container iframe {
+  .video-container iframe {
     width: 100%;
     height: 450px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    /* border-radius: 8px; */
-}
+  }
 
-/* Improved responsiveness for smaller screens */
-@media (max-width: 992px) {
+  /* Improved responsiveness for smaller screens */
+  @media (max-width: 992px) {
     .amenities-list {
-        grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
     }
-}
+  }
 
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
     .features-container {
-        flex-direction: column-reverse; /* Video first, then amenities on mobile */
-        align-items: center;
+      flex-direction: column-reverse; /* Video first, then amenities on mobile */
+      align-items: center;
+      margin: 20px auto; /* Reduced margin for mobile */
     }
     
     .amenities-container {
-        max-width: 100%;
-        width: 100%;
+      max-width: 100%;
+      width: 100%;
     }
     
     .video-container {
-        max-width: 100%;
-        width: 100%;
-        margin-bottom: 30px;
+      max-width: 100%;
+      width: 100%;
+      margin-bottom: 30px;
     }
     
     .video-container iframe {
-        height: 350px;
+      height: 350px;
     }
     
     .amenities-list {
-        grid-template-columns: repeat(2, 1fr); /* Two columns on tablet */
-        gap: 15px; /* Slightly reduced gap for smaller screens */
+      grid-template-columns: repeat(2, 1fr); /* Two columns on tablet */
+      gap: 15px; /* Slightly reduced gap for smaller screens */
     }
-}
+  }
 
-@media (max-width: 576px) {
+  @media (max-width: 576px) {
     .amenities-list {
-        grid-template-columns: 1fr; /* Single column on mobile */
+      grid-template-columns: 1fr; /* Single column on mobile */
     }
     
     .video-container iframe {
-        height: 250px;
+      height: 250px;
     }
     
     .amenities-list li {
-        padding: 10px 0; /* More padding for mobile view */
+      padding: 10px 0; /* More padding for mobile view */
     }
-}
-</style>
-</div>
+  }
+</style></div></div></div>
+            </div>
         <!-- House Area Two -->
         <h1 class="centered-heading">Sold Plots</h1>
 
@@ -1296,6 +1297,7 @@
                 </div>
             </div>
         </footer>
+        
         <!-- Footer Area End -->
 
         <!-- Modal -->
